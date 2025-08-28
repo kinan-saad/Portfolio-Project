@@ -39,6 +39,9 @@
 }
 
 .step-card {
+  display: flex; /* Add this line to make the content a flex container */
+  flex-direction: column; /* Add this line to stack content vertically */
+  flex-grow: 1; /* Add this to make the content area grow and fill space */
   background: #fff;
   padding: 1.5rem;
   border-radius: 1rem;
@@ -64,6 +67,7 @@
 }
 
 .step-card h3 {
+  flex-grow: 1;
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
@@ -76,6 +80,23 @@
   line-height: 1.5;
 }
 
+.view-project-btn {
+  background: transparent;
+  border: 1.5px solid #9333ea;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  color: #9333ea;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-project-btn:hover {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: #fff;
+  border-color: transparent;
+}
 /* Responsiveness */
 @media (max-width: 1024px) {
   .hero-container {
