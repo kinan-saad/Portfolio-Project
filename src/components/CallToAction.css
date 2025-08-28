@@ -1,0 +1,49 @@
+.cta-section {
+  width: 100%;
+  background-color: #111827; /* Dark navy background */
+  padding: 4rem 2rem;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-container h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.cta-container p {
+  font-size: 1rem;
+  color: #9ca3af;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #6d28d9, #9333ea);
+  transform: translateY(-2px);
+}
+
+.cta-icon {
+  margin-top: 2px;
+}

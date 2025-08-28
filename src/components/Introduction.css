@@ -1,0 +1,126 @@
+/* src/components/Introduction.css */
+.introduction-section {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8); /* full-width transparent background */
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 6rem 0; /* no side padding, background touches screen edges */
+}
+
+.intro-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* keeps content centered */
+  /* padding: 0 2rem;   keeps content from touching edges */
+  gap: 2rem;
+}
+
+.intro-text {
+  flex: 1;
+  text-align: left;
+}
+
+.intro-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1f1f1f;
+}
+
+.intro-text .highlight {
+  color: #8a2be2; /* purple accent */
+}
+
+.intro-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.say-hello-btn {
+  background: linear-gradient(135deg, #8a2be2, #a855f7);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.say-hello-btn:hover {
+  transform: scale(1.05);
+}
+
+.intro-stats {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 120px;
+  background: rgba(138, 43, 226, 0.05);
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.stat-card h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #8a2be2;
+}
+
+.stat-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.intro-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-image img {
+  max-width: 350px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 992px) {
+  .intro-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-text {
+    text-align: center;
+  }
+
+  .intro-stats {
+    justify-content: center;
+  }
+
+  .intro-image {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .intro-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .stat-card h2 {
+    font-size: 1.3rem;
+  }
+}

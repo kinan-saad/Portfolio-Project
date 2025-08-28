@@ -1,0 +1,94 @@
+.hero-section {
+  width: 100%;
+  background-color: #f8f9fc; /* matches your screenshot bg */
+  padding: 4rem 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-text {
+  text-align: left;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+.hero-text p {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.hero-steps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.step-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.iconBox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #7c3aed, #a855f7); /* purple gradient */
+  box-shadow: 0 8px 24px rgba(126, 58, 242, 0.25);
+  margin-bottom: 1rem;
+}
+
+.step-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.step-card p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-steps {
+    grid-template-columns: 1fr;
+  }
+}

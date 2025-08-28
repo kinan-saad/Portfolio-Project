@@ -1,0 +1,143 @@
+.certificates-section {
+  width: 100%;
+  background-color: #fff;
+  padding: 4rem 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.certificates-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.certificates-container h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.certificates-container p {
+  color: #6b7280;
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.6;
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.certificate-card {
+  background: #fff;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.certificate-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.certificate-content {
+  display: flex; /* Add this line to make the content a flex container */
+  flex-direction: column; /* Add this line to stack content vertically */
+  flex-grow: 1; /* Add this to make the content area grow and fill space */
+  padding: 1.25rem;
+  text-align: left;
+}
+
+.certificate-category {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #6b7280;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.certificate-content h3 {
+  flex-grow: 1;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.certificate-content p {
+  flex-grow: 1;
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.certificate-content a {
+  margin-top: auto; /* Add this line to push the button to the bottom */
+  text-align: left; /* Ensure the button stays on the left */
+}
+
+.case-study-btn {
+  background: transparent;
+  border: 1.5px solid #9333ea;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  color: #9333ea;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.case-study-btn:hover {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: #fff;
+  border-color: transparent;
+}
+
+.certificate-link {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.more-projects {
+  margin-top: 3rem;
+}
+
+.more-btn {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.more-btn:hover {
+  background: linear-gradient(135deg, #6d28d9, #9333ea);
+}
+
+/* Responsiveness */
+@media (max-width: 640px) {
+  .certificate-image img {
+    height: 150px;
+  }
+}

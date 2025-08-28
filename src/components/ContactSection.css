@@ -1,0 +1,125 @@
+.contact-section {
+  width: 100%;
+  background-color: #f8f9fc;
+  padding: 4rem 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+/* --- Contact Info --- */
+.contact-info h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+.contact-info p {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info span {
+  color: #111827;
+  font-weight: 500;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: white;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+}
+
+/* --- Form --- */
+.contact-form h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #0f172a;
+}
+
+.contact-form .subtext {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  outline: none;
+  font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+}
+
+.contact-form textarea {
+  grid-column: span 2;
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  grid-column: span 2;
+  padding: 0.85rem;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+  .contact-form form {
+    grid-template-columns: 1fr;
+  }
+}
