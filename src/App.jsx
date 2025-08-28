@@ -10,6 +10,7 @@ import Hero from './components/Hero'
 import Certificates from './components/Certificates'
 import CallToAction from './components/CallToAction'
 import ContectSection from './components/ContactSection'
+import CompetitiveProgramming from './components/CompetitiveProgramming'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +21,7 @@ function App() {
     <Certificates />,
     <CallToAction />,
     <ContectSection />,
+    <CompetitiveProgramming />
   ]
 
   return (
