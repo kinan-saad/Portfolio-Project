@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './CompetitiveProgramming.css';
-import LeetCode from '../assets/LeetCode.png'
 import CF from '../assets/codeforces_logo.png'
 import Atcoder from '../assets/atcoder.png'
 import CodeChef from '../assets/CodeChef_Logo.svg.png'
 import Spoj from '../assets/spoj.jpeg'
 
 const cardsData = [
-  { image: LeetCode, alt: 'LeetCode', url: 'https://leetcode.com/u/kinan19/', text: 'An online platform to help you enhance your skills, expand your knowledge and prepare for technical interviews.' },
+  { image: 'https://leetcard.jacoblin.cool/kinan19?theme=dark&font=Noto%20Sans%20Meetei%20Mayek&ext=heatmap', alt: 'LeetCode', url: 'https://leetcode.com/u/kinan19/', text: 'An online platform to help you enhance your skills, expand your knowledge and prepare for technical interviews.' },
   { image: CF, alt: 'Codeforces', url: 'https://codeforces.com/profile/USACOW', text: 'A popular online platform for competitive programming that hosts regular contests where participants compete to solve algorithmic problems.' },
   { image: Atcoder, alt: 'AtCoder', url: 'https://atcoder.jp/users/Gankutsuou', text: 'A Japanese website that hosts weekly online programming competitions for a wide range of skill levels, from beginners to experts.' },
   { image: CodeChef, alt: 'CodeChef', url: 'https://www.codechef.com/users/gankutsuou', text: 'An online platform for learning and improving coding skills through practice problems and competitive programming contests.' },
