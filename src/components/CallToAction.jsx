@@ -15,8 +15,8 @@ export default function CallToAction() {
           href="mailto:kinan.saad.19@gmail.com"
           className="cta-button"
         >
-          <Mail size={18} className="cta-icon" />
-          Contact Me
+          <Mail size={22} className="cta-icon" />
+          Send me an email
         </a>
       </div>
     </section>

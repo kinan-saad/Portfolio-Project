@@ -28,7 +28,7 @@
 
 .card {
   width: 350px; /* Increased card width */
-  background: #fff;
+  background: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -44,7 +44,7 @@
 .card img {
   width: 100%;
   height: 250px; /* Increased image height */
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .card-content {
@@ -63,22 +63,25 @@
   margin-top: 10px;
 }
 
-.dots-container {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #ccc;
-  margin: 0 5px;
+.case-study-btn {
+  background: transparent;
+  border: 1.5px solid #9333ea;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  color: #9333ea;
+  font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
 }
 
-.dot.active {
-  background-color: #333;
+.case-study-btn:hover {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: #fff;
+  border-color: transparent;
 }
+
+

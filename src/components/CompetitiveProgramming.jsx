@@ -1,28 +1,33 @@
-
 import React, { useState, useEffect } from 'react';
 import './CompetitiveProgramming.css';
+import LeetCode from '../assets/LeetCode.png'
+import CF from '../assets/codeforces_logo.png'
+import Atcoder from '../assets/atcoder.png'
+import CodeChef from '../assets/CodeChef_Logo.svg.png'
+import Spoj from '../assets/spoj.jpeg'
 
 const cardsData = [
-  { image: 'https://via.placeholder.com/350x250', alt: 'Card 1', date: '22 Oct, 2020 / 246 Comments', text: 'Lorem ipsum dolor sit consea. Nulla purus arcu' },
-  { image: 'https://via.placeholder.com/350x250', alt: 'Card 2', date: '22 Oct, 2020 / 246 Comments', text: 'Lorem ipsum dolor sit consea. Nulla purus arcu' },
-  { image: 'https://via.placeholder.com/350x250', alt: 'Card 3', date: '22 Oct, 2020 / 246 Comments', text: 'Lorem ipsum dolor sit consea. Nulla purus arcu' },
-  { image: 'https://via.placeholder.com/350x250', alt: 'Card 4', date: '22 Oct, 2020 / 246 Comments', text: 'Lorem ipsum dolor sit consea. Nulla purus arcu' },
-  { image: 'https://via.placeholder.com/350x250', alt: 'Card 5', date: '22 Oct, 2020 / 246 Comments', text: 'Lorem ipsum dolor sit consea. Nulla purus arcu' },
+  { image: LeetCode, alt: 'LeetCode', url: 'https://leetcode.com/u/kinan19/', text: 'An online platform to help you enhance your skills, expand your knowledge and prepare for technical interviews.' },
+  { image: CF, alt: 'Codeforces', url: 'https://codeforces.com/profile/USACOW', text: 'A popular online platform for competitive programming that hosts regular contests where participants compete to solve algorithmic problems.' },
+  { image: Atcoder, alt: 'AtCoder', url: 'https://atcoder.jp/users/Gankutsuou', text: 'A Japanese website that hosts weekly online programming competitions for a wide range of skill levels, from beginners to experts.' },
+  { image: CodeChef, alt: 'CodeChef', url: 'https://www.codechef.com/users/gankutsuou', text: 'An online platform for learning and improving coding skills through practice problems and competitive programming contests.' },
+  { image: Spoj, alt: 'SPOJ', url: 'https://www.spoj.com/myaccount/', text: 'An online platform with a vast collection of programming problems for practice, and for hosting programming contests.' },
 ];
 
 const CompetitiveProgramming = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const handleDotClick = (index) => {
-    setActiveIndex(index);
-  };
+  const [activeIndex, setActiveIndex] = useState(-1);
 
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === 'ArrowRight') {
         setActiveIndex((prevIndex) => (prevIndex + 1) % cardsData.length);
       } else if (event.key === 'ArrowLeft') {
-        setActiveIndex((prevIndex) => (prevIndex - 1 + cardsData.length) % cardsData.length);
+        setActiveIndex((prevIndex) => {
+          if (prevIndex === -1) {
+            return cardsData.length - 1;
+          }
+          return (prevIndex - 1 + cardsData.length) % cardsData.length;
+        });
       }
     };
 
@@ -36,25 +41,23 @@ const CompetitiveProgramming = () => {
   return (
     <section className="competitive-programming">
       <h2>Competitive Programming</h2>
-      <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
-      <div className="card-container">
+      <p>Competitive programming is a mind sport where participants solve programming problems under strict time and memory 
+        constraints, typically within a contest setting.
+      <br /><br />I enjoy doing problem-solving daily! <br/> Here are some of my competitive programming profile on various website.</p>
+      <div className="card-container" onMouseLeave={() => setActiveIndex(-1)}>
         {cardsData.map((card, index) => (
-          <div className={`card ${activeIndex === index ? 'active' : ''}`} key={index}>
+          <div
+            className={`card ${activeIndex === index ? 'active' : ''}`}
+            key={index}
+            onMouseEnter={() => setActiveIndex(index)}
+          >
             <img src={card.image} alt={card.alt} />
             <div className="card-content">
-              <span>{card.date}</span>
+              <span>{card.alt}</span>
               <p>{card.text}</p>
+              <a href={card.url} target="_blank" rel="noopener noreferrer" className="case-study-btn">View Profile</a>
             </div>
           </div>
-        ))}
-      </div>
-      <div className="dots-container">
-        {cardsData.map((_, index) => (
-          <span
-            key={index}
-            className={`dot ${activeIndex === index ? 'active' : ''}`}
-            onClick={() => handleDotClick(index)}
-          ></span>
         ))}
       </div>
     </section>
